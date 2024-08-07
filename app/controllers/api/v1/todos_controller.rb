@@ -51,6 +51,6 @@ class Api::V1::TodosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def todo_params
-      params.require(:todo).permit(:title, :body)
+      params.require(:todo).permit(:title, :body, :done)
     end
 end
