@@ -34,7 +34,6 @@ function ToDoList() {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
 
-
   // update todo on click
   const handleCheckboxClick = (id) => {
     const updatedTodos = todos.map((todo) =>
@@ -63,9 +62,14 @@ function ToDoList() {
       });
   };
 
+  // Function to count objects with a certain state
+  function countObjectsWithState(todos, targetState) {
+    return todos.filter((todo) => todo.done === targetState).length;
+  }
 
   return (
     <div>
+      <h1>You have {countObjectsWithState(todos, false)} open todos.</h1>
       {todos.map((todo) => (
         <form key={todo.id}>
           <div className="todo-container">
