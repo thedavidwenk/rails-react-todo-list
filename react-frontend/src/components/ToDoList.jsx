@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { RAILS_API_URL } from "../constants";
 import Checkbox from "./Checkbox";
+import { Link } from "react-router-dom";
 
 
 function ToDoList() {
@@ -73,7 +74,10 @@ function ToDoList() {
       {todos.map((todo) => (
         <form key={todo.id}>
           <div className="todo-container">
-            <h2>{todo.title}</h2>
+            <h2>
+              <Link to={`/todo/${todo.id}`}>{todo.title}</Link>
+            </h2>
+
             <p>{todo.body}</p>
             <Checkbox
               checked={todo.done}

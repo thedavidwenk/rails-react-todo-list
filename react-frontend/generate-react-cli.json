@@ -1,0 +1,22 @@
+{
+  "component": {
+    "path": "src/components",
+    "type": "functional",
+    "withStyle": true,
+    "styleType": "scss",
+    "withTest": false,
+    "default": {
+      "path": "src/components",
+      "withStyle": true,
+      "withTest": false,
+      "withStory": false,
+      "withLazy": false,
+      "withExtension": "jsx"
+    }
+  },
+  "usesTypeScript": false,
+  "usesStyledComponents": false,
+  "usesCssModule": false,
+  "cssPreprocessor": "css",
+  "testLibrary": "None"
+}
